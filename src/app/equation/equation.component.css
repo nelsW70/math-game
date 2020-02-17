@@ -27,3 +27,7 @@ input:focus {
   text-align: center;
   font-size: 16px;
 }
+
+.close {
+  background: rgba(255, 236, 60, 0.3);
+}
