@@ -14,7 +14,7 @@ export class EquationComponent implements OnInit {
       b: new FormControl(this.randomNumber()),
       answer: new FormControl('')
     },
-    [MathValidators.addition]
+    [MathValidators.addition('answer', 'a', 'b')]
   );
 
   constructor() {}
@@ -27,7 +27,11 @@ export class EquationComponent implements OnInit {
     return this.mathForm.value.b;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.mathForm.statusChanges.subscribe(value => {
+      console.log('value', value);
+    });
+  }
 
   randomNumber() {
     return Math.floor(Math.random() * 10);
