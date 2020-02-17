@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { delay } from 'rxjs/operators';
 import { MathValidators } from './../math-validators';
 
 @Component({
@@ -28,11 +29,11 @@ export class EquationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.mathForm.statusChanges.subscribe(value => {
+    this.mathForm.statusChanges.pipe(delay(100)).subscribe(value => {
       if (value === 'INVALID') {
         return;
       }
-      this.mathForm.patchValue({
+      this.mathForm.setValue({
         a: this.randomNumber(),
         b: this.randomNumber(),
         answer: ''
