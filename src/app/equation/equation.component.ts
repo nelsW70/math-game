@@ -15,6 +15,18 @@ export class EquationComponent implements OnInit {
 
   constructor() {}
 
+  get a() {
+    return this.mathForm.value.a;
+  }
+
+  get b() {
+    return this.mathForm.value.b;
+  }
+
+  get answer() {
+    return this.a + this.b;
+  }
+
   ngOnInit() {}
 
   randomNumber() {
