@@ -16,6 +16,7 @@ export class EquationComponent implements OnInit {
     [
       (form: AbstractControl) => {
         const { a, b, answer } = form.value;
+        // tslint:disable-next-line: radix
         if (a + b === parseInt(answer)) {
           return null;
         }
