@@ -23,10 +23,6 @@ export class EquationComponent implements OnInit {
     return this.mathForm.value.b;
   }
 
-  get answer() {
-    return this.a + this.b;
-  }
-
   ngOnInit() {}
 
   randomNumber() {
