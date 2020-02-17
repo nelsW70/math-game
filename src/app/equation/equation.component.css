@@ -2,7 +2,7 @@ form {
   margin-top: 20%;
   display: flex;
   justify-content: center;
-  font-size: 40px;
+  font-size: 36px;
   position: relative;
 }
 
@@ -12,6 +12,7 @@ input {
   border-bottom: 1px solid black;
   width: 20%;
   text-align: center;
+  margin-left: 0.75rem;
 }
 
 input:focus {
@@ -24,5 +25,5 @@ input:focus {
   left: 0;
   right: 0;
   text-align: center;
-  font-size: 24px;
+  font-size: 16px;
 }
